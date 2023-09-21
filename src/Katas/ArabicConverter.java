@@ -1,7 +1,11 @@
 package Katas;
 
-public class RomanNumeralConverter {
-    public static String convertToRoman(int number){
+public class ArabicConverter {
+    public static String convertToRoman(int number) throws Exception {
+
+        if(number < 0){
+            throw new Exception("Unable to convert to Roman");
+        }
         String roman = "";
         while(number >= 1000){
             roman += "M";
